@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+      <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Números Primos</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <button id="saibaMaisBtn" class="saiba-mais-btn">Saiba mais</button>
+    <header>
+      <h1>Decomposição em Primos</h1>
+        <p class="explicacao">
+        Todo número natural é formado pela multiplicação de primos únicos!
+        Arraste primos para decompor o número abaixo.
+        </p>
+      <div class="info">
+          <p id="targetNumber">210</p>
+      </div>
+    </header>
+
+    <div id="dropArea" class="drop-area">
+      <div class="placeholder">Solte o número aqui!</div>
+    </div>
+
+    <div class="result-history">
+      <h3>Histórico de Divisões</h3>
+      <div class="history-container" id="historyContainer"></div>
+    </div>
+
+    <div class="rectangle">
+      <div class="scroll-indicator left" onclick="scrollNumbers(-300)">
+        <i class="fas fa-chevron-left"></i>
+      </div>
+        
+      <div class="scroll-container" id="numbersContainer">
+        <!-- Os números primos serão gerados por JavaScript -->
+      </div>
+        
+      <div class="scroll-indicator right" onclick="scrollNumbers(300)">
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
+
+    <div id="infoModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+          <h2>Por que fatoramos em números primos?</h2>
+          <p>A fatoração em números primos é um conceito fundamental da matemática conhecido como <strong>Teorema Fundamental da Aritmética</strong>.</p>
+      
+        <p>Todo número natural maior que 1 pode ser representado como um produto único de números primos (desconsiderando a ordem). Por exemplo:</p>
+      
+        <div class="exemplo">
+          <p>210 = 2 × 3 × 5 × 7</p>
+        </div>
+      
+        <h3>Por que isso é importante?</h3>
+        <ul>
+          <li>Permite simplificar frações</li>
+          <li>Facilita o cálculo de MDC e MMC</li>
+          <li>É essencial em criptografia (ex: RSA)</li>
+          <li>Ajuda na resolução de problemas matemáticos complexos</li>
+        </ul>
+      
+        <p>Nesta atividade, você está decompondo números em seus fatores primos através de divisões sucessivas. Tente reduzir o número até 1!</p>
+      </div>
+    </div>
+
+    <script src="code.js"></script>
+  </body>
+</html>
